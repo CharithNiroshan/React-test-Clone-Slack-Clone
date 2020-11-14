@@ -1,0 +1,29 @@
+.sidebaroption {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.sidebaroption:hover {
+  background-color: #340e36;
+  opacity: 0.9;
+}
+
+.sidebaroption > .MuiSvgIcon-root {
+  padding: 10px;
+  font-size: 16px !important;
+}
+
+.sidebaroption_channelname {
+  padding: 10px 0;
+}
+
+.sidebaroption_hash {
+  padding: 10px;
+}
+
+.sidebaroption > h3 {
+  font-weight: 500;
+}
