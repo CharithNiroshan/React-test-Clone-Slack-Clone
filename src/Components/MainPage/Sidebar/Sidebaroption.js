@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import db from "../firbase";
+import db from "../../../Firebase/firbase";
 import "./Sidebaroption.css";
 
 function Sidebaroption(props) {

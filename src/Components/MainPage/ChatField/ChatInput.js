@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./ChatInput.css";
 import { Button } from "@material-ui/core";
-import { useStateValue } from "./stateprovider";
-import db from "../firbase";
+import { useStateValue } from "../../../Datalayerfiles/stateprovider";
+import db from "../../../Firebase/firbase";
 import firebase from "firebase";
 
 function ChatInput(props) {

@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Header from "./Components/Header";
-import Sidebar from "./Components/Sidebar";
-import Chat from "./Components/Chat";
-import Login from "./Components/Login";
+import Header from "./Components/MainPage/Header/Header";
+import Sidebar from "./Components/MainPage/Sidebar/Sidebar";
+import Chat from "./Components/MainPage/ChatField/Chat";
+import Login from "./Components/Login Page/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useStateValue } from "./Components/stateprovider";
+import { useStateValue } from "./Datalayerfiles/stateprovider";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();

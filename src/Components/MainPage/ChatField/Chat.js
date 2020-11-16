@@ -3,7 +3,7 @@ import "./Chat.css";
 import { useParams } from "react-router-dom";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import { InfoOutlined } from "@material-ui/icons";
-import db from "../firbase";
+import db from "../../../Firebase/firbase";
 import Message from "./Message";
 import ChatInput from "./ChatInput";
 

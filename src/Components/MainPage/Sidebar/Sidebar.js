@@ -13,8 +13,8 @@ import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import InsertCommentIcon from "@material-ui/icons/InsertComment";
 import Sidebaroption from "./Sidebaroption";
-import db from "../firbase";
-import { useStateValue } from "./stateprovider";
+import db from "../../../Firebase/firbase";
+import { useStateValue } from "../../../Datalayerfiles/stateprovider";
 
 function Sidebar() {
   const [channels, setchannels] = useState([]);

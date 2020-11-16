@@ -1,8 +1,8 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import "./Login.css";
-import { auth, provider } from "../firbase";
-import { useStateValue } from "./stateprovider";
+import { auth, provider } from "../../Firebase/firbase";
+import { useStateValue } from "../../Datalayerfiles/stateprovider";
 
 function Login() {
   const [state, dispatch] = useStateValue();
