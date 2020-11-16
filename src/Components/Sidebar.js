@@ -14,9 +14,11 @@ import "./Sidebar.css";
 import InsertCommentIcon from "@material-ui/icons/InsertComment";
 import Sidebaroption from "./Sidebaroption";
 import db from "../firbase";
+import { useStateValue } from "./stateprovider";
 
 function Sidebar() {
   const [channels, setchannels] = useState([]);
+  const [{ user }] = useStateValue();
 
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) => {
@@ -36,7 +38,7 @@ function Sidebar() {
           <h2>Clever Programmer</h2>
           <h3>
             <FiberManualRecord className="onlineicon" />
-            Clever_qazi
+            {user.displayName}
           </h3>
         </div>
         <CreateIcon />
@@ -52,9 +54,15 @@ function Sidebar() {
       <hr />
       <Sidebaroption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
-      <Sidebaroption Icon={AddIcon} title="Add Channel" />
+      <Sidebaroption Icon={AddIcon} title="Add Channel" Addchannel />
       {channels.map((channel) => {
-        return <Sidebaroption title={channel.name} key={channel.id} />;
+        return (
+          <Sidebaroption
+            title={channel.name}
+            key={channel.id}
+            id={channel.id}
+          />
+        );
       })}
     </div>
   );
